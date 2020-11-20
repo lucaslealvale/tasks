@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Task, TaskSerializer
 from django.shortcuts import render,redirect
-
+from rest_framework.parsers import JSONParser
 # Create your views here.
 
 
