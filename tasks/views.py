@@ -19,7 +19,7 @@ def getTask(request):
         data = JSONParser().parse(request)
         serializer =TaskSerializer(data = data)
   
-    if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data,status =201)
-    return JsonResponse(serializer.errors,status = 400)
+        if serializer.is_valid():
+                serializer.save()
+                return JsonResponse(serializer.data,status =201)
+        return JsonResponse(serializer.errors,status = 401)
